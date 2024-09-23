@@ -9,7 +9,7 @@ pipeline {
         stage('checkout') {
             steps {
                 echo 'checkout code from git'
-                git 'https://github.com/its-varthini/maven-web-app-ashokit.git'
+                git 'https://github.com/its-varthini/Jenkins_docker_integration1.git'
             }
         }
         
@@ -30,8 +30,8 @@ pipeline {
         stage('docker deploy') {
             steps {
                 echo 'build docker image'
-                sh 'docker stop mywebapp'
-                sh 'docker rm mywebapp'
+                //sh 'docker stop mywebapp'
+                //sh 'docker rm mywebapp'
                 sh 'docker run -d --name mywebapp -p 9090:8080 mavenwebimage'
             }
         }
