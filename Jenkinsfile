@@ -10,6 +10,7 @@ pipeline {
             steps {
                 echo 'checkout code from git'
                 git 'https://github.com/its-varthini/Jenkins_docker_integration1.git'
+               
             }
         }
         
